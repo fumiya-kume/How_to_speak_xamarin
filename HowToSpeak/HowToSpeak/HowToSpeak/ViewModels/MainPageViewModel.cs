@@ -1,13 +1,8 @@
 ﻿using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Input;
 using HowToSpeak.Services;
-using Prism.Services;
-using Xamarin.Forms;
 
 namespace HowToSpeak.ViewModels
 {

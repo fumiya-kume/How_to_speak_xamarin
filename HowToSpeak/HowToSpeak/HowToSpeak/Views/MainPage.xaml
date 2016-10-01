@@ -9,7 +9,6 @@
              Title="MainPage">
   
   <StackLayout  HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="Infinity">
-    <!--<Label Text="{Binding Title}" />-->
     <Entry HorizontalOptions="Fill" Text="{Binding SpeechText}"></Entry>
     <Button Command="{Binding SpeechClick}"  Text="Speak"/>
   </StackLayout>
