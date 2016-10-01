@@ -8,6 +8,6 @@ namespace HowToSpeak.Services
 {
     public interface ISpeech
     {
-        void speak(string Text);
+        void Speak(string text);
     }
 }

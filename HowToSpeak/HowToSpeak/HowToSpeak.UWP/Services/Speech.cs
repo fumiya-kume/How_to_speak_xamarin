@@ -10,7 +10,7 @@ namespace HowToSpeak.UWP.Services
     public class Speech : ISpeech
 
 {
-        public void speak(string Text)
+        public void Speak(string text)
         {
             throw new NotImplementedException();
         }
