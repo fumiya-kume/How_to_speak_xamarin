@@ -37,6 +37,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ISpeech.cs" />
+    <Compile Include="Util\CountryList.cs" />
+    <Compile Include="Util\UnableSpeechException.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
