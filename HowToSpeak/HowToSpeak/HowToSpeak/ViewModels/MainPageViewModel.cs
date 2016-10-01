@@ -4,6 +4,10 @@ using Prism.Navigation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
+using HowToSpeak.Services;
+using Prism.Services;
+using Xamarin.Forms;
 
 namespace HowToSpeak.ViewModels
 {
@@ -16,9 +20,14 @@ namespace HowToSpeak.ViewModels
             set { SetProperty(ref _title, value); }
         }
 
+        public ICommand SpeechClick { get; set; }
+
         public MainPageViewModel()
         {
-
+            SpeechClick = new DelegateCommand(() =>
+            {
+                Xamarin.Forms.DependencyService.Get<ISpeech>().Speak("Hello World");
+            });
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)
