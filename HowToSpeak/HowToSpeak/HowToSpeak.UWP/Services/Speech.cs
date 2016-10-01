@@ -1,18 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Windows.Media.SpeechSynthesis;
+using Windows.UI.Xaml.Controls;
 using HowToSpeak.Services;
+using HowToSpeak.UWP.Services;
 
+[assembly: Xamarin.Forms.Dependency(typeof(Speech))]
 namespace HowToSpeak.UWP.Services
 {
     public class Speech : ISpeech
-
-{
-        public void Speak(string text)
+    {
+        public async void Speak(string text)
         {
-            throw new NotImplementedException();
+            var mediaelement = new MediaElement();
+            var voice = await new SpeechSynthesizer().SynthesizeTextToStreamAsync(text);
+            mediaelement.SetSource(voice, voice.ContentType);
+            mediaelement.Play();
         }
-}
+    }
 }
