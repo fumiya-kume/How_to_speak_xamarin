@@ -6,10 +6,13 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="HowToSpeak.Views.MainPage"
              xmlns:viewmodel="clr-namespace:HowToSpeak.ViewModels;assembly=HowToSpeak"
+             xmlns:c="clr-namespace:HowToSpeak.Util;assembly=HowToSpeak"
              Title="MainPage">
   
   <StackLayout  HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="Infinity">
-    <Entry HorizontalOptions="Fill" Text="{Binding SpeechText}"></Entry>
+    <Entry HorizontalOptions="Fill" Text="{Binding SpeechText}" Placeholder="{Binding NowCountry}"></Entry>
+    <c:BindablePicker ItemsSource="{Binding CountryList}"  SelectedIndex="{Binding CountrySelectedIndex,Mode=TwoWay}" />
     <Button Command="{Binding SpeechClick}"  Text="Speak"/>
+    <Label Text="{Binding NowCountry,Mode=TwoWay}"></Label>
   </StackLayout>
 </ContentPage>

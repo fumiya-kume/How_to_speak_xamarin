@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using static HowToSpeak.Util.Country;
 
 namespace HowToSpeak.Util
 {
@@ -8,15 +10,20 @@ namespace HowToSpeak.Util
         {
             switch (country)
             {
-                case Country.Japan:
+                case Japan:
                     return "ja-JP";
-                case Country.US:
+                case US:
                     return "us-US";
-                case Country.Chin:
+                case Chin:
                     return "cn-ZN";
                 default:
                     throw new ArgumentOutOfRangeException(nameof(country), country, null);
             }
+        }
+
+        public static List<string> GetCountryList()
+        {
+            return new List<string> {GetCountryCode(Japan),GetCountryCode(US),GetCountryCode(Chin)};
         }
     }
 

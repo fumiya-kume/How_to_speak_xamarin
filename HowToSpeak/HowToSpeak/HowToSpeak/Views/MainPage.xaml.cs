@@ -8,5 +8,10 @@ namespace HowToSpeak.Views
         {
             InitializeComponent();
         }
+
+        private void Element_OnDescendantAdded(object sender, ElementEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
